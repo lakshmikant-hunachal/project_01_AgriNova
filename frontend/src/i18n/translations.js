@@ -70,6 +70,7 @@ export const translations = {
       subtitle: "Here is your farm overview and tools.",
       tabScanner: "Disease Scanner",
       tabHistory: "Scan History",
+      tabSoilAdvisor: "Soil & Yield Advisor",
       scanner: {
         title: "AI Crop Analyzer",
         uploadTitle: "Upload from device",
@@ -93,6 +94,27 @@ export const translations = {
       history: {
         title: "Your Scan History",
         desc: "History integration coming soon. This will display all your past scans fetched from the backend."
+      },
+      soil: {
+        title: "AI Soil Analyzer",
+        uploadTitle: "Upload Soil Image",
+        btnAnalyze: "Analyze Soil",
+        btnAnalyzing: "Analyzing Soil...",
+        btnGenerate: "Generate Yield Strategy",
+        selectCrop: "Select Crop",
+        selectSeason: "Select Season",
+        selectWater: "Select Water Level",
+        phLevel: "pH Level",
+        cropsLabel: "Recommended Crops",
+        strategyTitle: "Yield Increment Strategy",
+        fertilizerTitle: "Recommended Fertilizers",
+        nutrientsTitle: "Soil Nutrient Composition (NPK & Carbon)",
+        qualityTitle: "Projected Crop Quality Factors",
+        clayey: "Clayey Soil",
+        loamy: "Loamy Soil",
+        sandy: "Sandy Soil",
+        black: "Black Soil",
+        red: "Red Soil"
       }
     },
     admin: {
@@ -176,6 +198,7 @@ export const translations = {
       subtitle: "यहाँ आपके खेत का अवलोकन और उपकरण हैं।",
       tabScanner: "बीमारी स्कैनर",
       tabHistory: "स्कैन इतिहास",
+      tabSoilAdvisor: "मिट्टी और उपज सलाहकार",
       scanner: {
         title: "एआई फसल विश्लेषक",
         uploadTitle: "डिवाइस से अपलोड करें",
@@ -199,6 +222,27 @@ export const translations = {
       history: {
         title: "आपका स्कैन इतिहास",
         desc: "इतिहास एकीकरण जल्द ही आ रहा है। यह बैकएंड से प्राप्त आपके सभी पिछले स्कैन प्रदर्शित करेगा।"
+      },
+      soil: {
+        title: "एआई मिट्टी विश्लेषक",
+        uploadTitle: "मिट्टी की छवि अपलोड करें",
+        btnAnalyze: "मिट्टी का विश्लेषण करें",
+        btnAnalyzing: "मिट्टी का विश्लेषण हो रहा है...",
+        btnGenerate: "उपज रणनीति उत्पन्न करें",
+        selectCrop: "फसल चुनें",
+        selectSeason: "मौसम चुनें",
+        selectWater: "पानी का स्तर चुनें",
+        phLevel: "pH स्तर",
+        cropsLabel: "अनुशंसित फसलें",
+        strategyTitle: "उपज बढ़ाने की रणनीति",
+        fertilizerTitle: "अनुशंसित उर्वरक",
+        nutrientsTitle: "मिट्टी के पोषक तत्वों की संरचना (NPK और कार्बन)",
+        qualityTitle: "अनुमानित फसल गुणवत्ता कारक",
+        clayey: "चिकनी मिट्टी",
+        loamy: "दोमट मिट्टी",
+        sandy: "रेतीली मिट्टी",
+        black: "काली मिट्टी",
+        red: "लाल मिट्टी"
       }
     },
     admin: {
@@ -225,7 +269,7 @@ export const translations = {
       hero: {
         title: "ಬೆಳೆ ರೋಗವನ್ನು ",
         titleHighlight: "ತಕ್ಷಣವೇ ಪತ್ತೆ ಮಾಡಿ",
-        subtitle: "ನಿಮ್ಮ ಬೆಳೆಯ ಫೋಟೋವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ ಮತ್ತು ಸುಧಾರಿತ ಎಐ ಬಳಸಿ ತಕ್ಷಣದ ರೋಗ ಪತ್ತೆ, ಚಿಕಿત્ಸೆ ಸಲಹೆ ಮತ್ತು ಇಳುವರಿ ಸುಧಾರಣೆಯ ಸಲಹೆಗಳನ್ನು ಪಡೆಯಿರಿ.",
+        subtitle: "ನಿಮ್ಮ ಬೆಳೆಯ ಫೋಟೋವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ ಮತ್ತು ಸುಧಾರಿತ ಎಐ ಬಳಸಿ ತಕ್ಷಣದ ರೋಗ ಪತ್ತೆ, ಚಿಕಿತ್ಸೆ ಸಲಹೆ ಮತ್ತು ಇಳುವರಿ ಸುಧಾರಣೆಯ ಸಲಹೆಗಳನ್ನು ಪಡೆಯಿರಿ.",
         btnTry: "ರೋಗ ಪತ್ತೆ ಪರೀಕ್ಷಿಸಿ",
         btnCreate: "ಖಾತೆ ರಚಿಸಿ"
       },
@@ -237,7 +281,7 @@ export const translations = {
         weatherTitle: "ಹವಾಮಾನ ಆಧಾರಿತ ಸಲಹೆಗಳು",
         weatherDesc: "ಪ್ರಸ್ತುತ ಹವಾಮಾನ ಪರಿಸ್ಥಿತಿಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಸ್ಮಾರ್ಟ್, ಸ್ಥಳ ಆಧಾರಿತ ಸಲಹೆಗಳನ್ನು ಪಡೆಯಿರಿ.",
         yieldTitle: "ಇಳುವರಿ ಸುಧಾರಣೆ",
-        yieldDesc: "ನಮ್ಮ ತಜ್ಞರ ಮಾರ್ಗದರ್ಶನ आणि ವೈಯಕ್ತಿಕ ಶಿಫಾರಸುಗಳೊಂದಿಗೆ ಬೆಳೆ ಗುಣಮಟ್ಟ ಮತ್ತು ಪ್ರಮಾಣವನ್ನು ಸುಧಾರಿಸಿ.",
+        yieldDesc: "ನಮ್ಮ ತಜ್ಞರ ಮಾರ್ಗದರ್ಶನ ಮತ್ತು ವೈಯಕ್ತಿಕ ಶಿಫಾರಸುಗಳೊಂದಿಗೆ ಬೆಳೆ ಗುಣಮಟ್ಟ ಮತ್ತು ಪ್ರಮಾಣವನ್ನು ಸುಧಾರಿಸಿ.",
         yieldNew: "ಹೊಸತು",
         treatmentTitle: "ಚಿಕಿત્ಸೆ ಸಲಹೆ",
         treatmentDesc: "ಅತ್ಯುತ್ತಮ ಸಸ್ಯ ಆರೋಗ್ಯಕ್ಕಾಗಿ ವೈಜ್ಞಾನಿಕವಾಗಿ ಬೆಂಬಲಿತ ರಸಗೊಬ್ಬರ ಮತ್ತು ಕೀಟನಾಶಕ ಶಿಫಾರಸುಗಳನ್ನು ಪಡೆಯಿರಿ.",
@@ -245,7 +289,7 @@ export const translations = {
       },
       ready: {
         title: "ನಿಮ್ಮ ಜಮೀನನ್ನು ಬದಲಾಯಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ?",
-        subtitle: "ತಮ್ಮ ಬೆಳೆಗಳನ್ನು ರક્ષಿಸಲು ಎಐ ಬಳಸುವ ಸಾವಿರಾರು ಆಧುನಿಕ ರೈತರನ್ನು ಸೇರಿಕೊಳ್ಳಿ.",
+        subtitle: "ತಮ್ಮ ಬೆಳೆಗಳನ್ನು ರಕ್ಷಿಸಲು ಎಐ ಬಳಸುವ ಸಾವಿರಾರು ಆಧುನಿಕ ರೈತರನ್ನು ಸೇರಿಕೊಳ್ಳಿ.",
         btn: "ಉಚಿತವಾಗಿ ಪ್ರಾರಂಭಿಸಿ"
       }
     },
@@ -282,6 +326,7 @@ export const translations = {
       subtitle: "ಇಲ್ಲಿ ನಿಮ್ಮ ಜಮೀನಿನ ಅವಲೋಕನ ಮತ್ತು ಉಪಕರಣಗಳಿವೆ.",
       tabScanner: "ರೋಗ ಸ್ಕ್ಯಾನರ್",
       tabHistory: "ಸ್ಕ್ಯಾನ್ ಇತಿಹಾಸ",
+      tabSoilAdvisor: "ಮಣ್ಣು ಮತ್ತು ಇಳುವರಿ ಸಲಹೆಗಾರ",
       scanner: {
         title: "ಎಐ ಬೆಳೆ ವಿಶ್ಲೇಷಕ",
         uploadTitle: "ಸಾಧನದಿಂದ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
@@ -294,7 +339,7 @@ export const translations = {
       },
       results: {
         title: "ವಿಶ್ಲೇಷಣೆಯ ಫಲಿತಾಂಶಗಳು",
-        placeholder: "ಫಲಿತಾಂಶಗಳನ್ನು ನೋಡಲು ಇಲ್ಲಿ ಚಿತ್ರವನ್ನು ಅಪ್‌লোಡ್ ಮಾಡಿ ಮತ್ತು ವಿಶ್ಲೇಷಿಸಿ.",
+        placeholder: "ಫಲಿತಾಂಶಗಳನ್ನು ನೋಡಲು ಇಲ್ಲಿ ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ ಮತ್ತು ವಿಶ್ಲೇಷಿಸಿ.",
         detected: "ರೋಗ ಪತ್ತೆಯಾಗಿದೆ",
         match: "ಹೊಂದಾಣಿಕೆ",
         treatmentTitle: "ಶಿಫಾರಸು ಮಾಡಿದ ಚಿಕಿತ್ಸೆ",
@@ -305,6 +350,27 @@ export const translations = {
       history: {
         title: "ನಿಮ್ಮ ಸ್ಕ್ಯಾನ್ ಇತಿಹಾಸ",
         desc: "ಇತಿಹಾಸದ ಸಮ್ಮಿಲನ ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ. ಇದು ನಿಮ್ಮ ಹಿಂದಿನ ಎಲ್ಲಾ ಸ್ಕ್ಯಾನ್‌ಗಳನ್ನು ಪ್ರದರ್ಶಿಸುತ್ತದೆ."
+      },
+      soil: {
+        title: "ಎಐ ಮಣ್ಣಿನ ವಿಶ್ಲೇಷಕ",
+        uploadTitle: "ಮಣ್ಣಿನ ಚಿತ್ರ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+        btnAnalyze: "ಮಣ್ಣನ್ನು ವಿಶ್ಲೇಷಿಸಿ",
+        btnAnalyzing: "ಮಣ್ಣನ್ನು ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...",
+        btnGenerate: "ಇಳುವರಿ ತಂತ್ರವನ್ನು ರಚಿಸಿ",
+        selectCrop: "ಬೆಳೆ ಆಯ್ಕೆಮಾಡಿ",
+        selectSeason: "ಋತು ಆಯ್ಕೆಮಾಡಿ",
+        selectWater: "ನೀರಿನ ಮಟ್ಟ ಆಯ್ಕೆಮಾಡಿ",
+        phLevel: "pH ಮಟ್ಟ",
+        cropsLabel: "ಶಿಫಾರಸು ಮಾಡಿದ ಬೆಳೆಗಳು",
+        strategyTitle: "ಇಳುವರಿ ಹೆಚ್ಚಿಸುವ ತಂತ್ರಗಳು",
+        fertilizerTitle: "ಶಿಫಾರಸು ಮಾಡಿದ ರಸಗೊಬ್ಬರಗಳು",
+        nutrientsTitle: "ಮಣ್ಣಿನ ಪೋಷಕಾಂಶಗಳ ಪ್ರಮಾಣ (NPK ಮತ್ತು ಕಾರ್ಬನ್)",
+        qualityTitle: "ಅಂದಾಜು ಬೆಳೆ ಗುಣಮಟ್ಟದ ಅಂಶಗಳು",
+        clayey: "ಜೇಡಿ ಮಣ್ಣು",
+        loamy: "ಲೋಮಿ ಮಣ್ಣು / ಕೆಂಪು ಮಣ್ಣು",
+        sandy: "ಮರಳು ಮಣ್ಣು",
+        black: "ಕಪ್ಪು ಮಣ್ಣು",
+        red: "ಕೆಂಪು ಮಣ್ಣು"
       }
     },
     admin: {
@@ -388,6 +454,7 @@ export const translations = {
       subtitle: "ఇక్కడ మీ వ్యవసాయం యొక్క అవలోకనం మరియు సాధనాలు ఉన్నాయి.",
       tabScanner: "తెగుళ్ల స్కానర్",
       tabHistory: "స్కాన్ చరిత్ర",
+      tabSoilAdvisor: "నేల మరియు దిగుబడి సలహాదారు",
       scanner: {
         title: "AI పంట విశ్లేషకం",
         uploadTitle: "పరికరం నుండి అప్‌లోడ్ చేయండి",
@@ -411,6 +478,27 @@ export const translations = {
       history: {
         title: "మీ స్కాన్ చరిత్ర",
         desc: "చరిత్ర ఏకీకరణ త్వరలో రానుంది. ఇది బ్యాకెండ్ నుండి సేకరించిన మీ గత స్కాన్‌లన్నింటినీ ప్రదర్శిస్తుంది."
+      },
+      soil: {
+        title: "AI నేల విశ్లేషకం",
+        uploadTitle: "నేల చిత్రాన్ని అప్‌లోడ్ చేయండి",
+        btnAnalyze: "నేలను విశ్లేషించండి",
+        btnAnalyzing: "నేలను విశ్లేషిస్తోంది...",
+        btnGenerate: "దిగుబడి వ్యూహాన్ని సృష్టించండి",
+        selectCrop: "పంటను ఎంచుకోండి",
+        selectSeason: "కాలాన్ని ఎంచుకోండి",
+        selectWater: "నీటి లభ్యతను ఎంచుకోండి",
+        phLevel: "pH స్థాయి",
+        cropsLabel: "సిఫార్సు చేసిన పంటలు",
+        strategyTitle: "దిగుబడి పెంపు వ్యూహం",
+        fertilizerTitle: "సిఫార్సు చేసిన ఎరువులు",
+        nutrientsTitle: "నేల పోషకాల శాతం (NPK & కార్బన్)",
+        qualityTitle: "అంచనా వేసిన పంట నాణ్యత కారకాలు",
+        clayey: "నల్ల రేగడి నేల (క్లే)",
+        loamy: "దుమ్ము నేల (లోమీ)",
+        sandy: "ఇసుక నేల",
+        black: "నల్ల నేల",
+        red: "ఎర్ర నేల"
       }
     },
     admin: {
@@ -494,6 +582,7 @@ export const translations = {
       subtitle: "உங்கள் பண்ணை கண்ணோட்டம் மற்றும் கருவிகள் இங்கே உள்ளன.",
       tabScanner: "நோய் ஸ்கேனர்",
       tabHistory: "ஸ்கேன் வரலாறு",
+      tabSoilAdvisor: "மண் மற்றும் மகசூல் ஆலோசகர்",
       scanner: {
         title: "AI பயிர் பகுப்பாய்வி",
         uploadTitle: "சாதனத்திலிருந்து பதிவேற்று",
@@ -517,6 +606,27 @@ export const translations = {
       history: {
         title: "உங்கள் ஸ்கேன் வரலாறு",
         desc: "வரலாற்று ஒருங்கிணைப்பு விரைவில் வருகிறது. இது பின்தளத்திலிருந்து பெறப்பட்ட உங்களது கடந்த கால ஸ்கேன்கள் அனைத்தையும் காண்பிக்கும்."
+      },
+      soil: {
+        title: "AI மண் பகுப்பாய்வி",
+        uploadTitle: "மண் படத்தை பதிவேற்றவும்",
+        btnAnalyze: "மண்ணை பகுப்பாய்வு செய்",
+        btnAnalyzing: "மண் பகுப்பாய்வு செய்கிறது...",
+        btnGenerate: "மகசூல் உத்தியை உருவாக்கு",
+        selectCrop: "பயிரைத் தேர்ந்தெடுக்கவும்",
+        selectSeason: "பருவத்தைத் தேர்ந்தெடுக்கவும்",
+        selectWater: "நீர் அளவைத் தேர்ந்தெடுக்கவும்",
+        phLevel: "pH அளவு",
+        cropsLabel: "பரிந்துரைக்கப்பட்ட பயிர்கள்",
+        strategyTitle: "விளைச்சல் அதிகரிப்பு உத்தி",
+        fertilizerTitle: "பரிந்துரைக்கப்பட்ட உரங்கள்",
+        nutrientsTitle: "மண்ணின் ஊட்டச்சத்து கலவை (NPK மற்றும் கார்பன்)",
+        qualityTitle: "எதிர்பார்க்கப்படும் பயிர் தர காரணிகள்",
+        clayey: "களிமண்",
+        loamy: "வண்டல் மண் (லோமி)",
+        sandy: "மணல் மண்",
+        black: "கரிசல் மண்",
+        red: "செம்மண்"
       }
     },
     admin: {
@@ -555,7 +665,7 @@ export const translations = {
         weatherTitle: "हवामान आधारित टिप्स",
         weatherDesc: "सध्याच्या हवामानाच्या स्थितीनुसार सानुकूलित केलेल्या स्मार्ट, स्थान-आधारित सूचना आणि सल्ले मिळवा.",
         yieldTitle: "उत्पादन सुधारणा",
-        yieldDesc: "आमच्या तज्ञांच्या मार्गदर्शनाखाली आणि वैयक्तिक शिफारसींसह पिकाची गुणवत्ता आणि प्रमाण सुधारा.",
+        yieldDesc: "आमच्या तज्ञांच्या मार्गदर्शनाखाली आणि वैयक्तिक शिफारसीसह पिकाची गुणवत्ता आणि प्रमाण सुधारा.",
         yieldNew: "नवीन",
         treatmentTitle: "उपचार सल्ला",
         treatmentDesc: "उत्कृष्ट वनस्पती आरोग्यासाठी वैज्ञानिकदृष्ट्या समर्थित खतांची शिफारस आणि कीटकनाशक शिफारसी मिळवा.",
@@ -600,6 +710,7 @@ export const translations = {
       subtitle: "येथे तुमच्या शेतीचे विहंगावलोकन आणि साधने आहेत.",
       tabScanner: "रोग स्कॅनर",
       tabHistory: "स्कॅन इतिहास",
+      tabSoilAdvisor: "माती आणि उत्पन्न सल्लागार",
       scanner: {
         title: "एआय पीक विश्लेषक",
         uploadTitle: "डिव्हाइसवरून अपलोड करा",
@@ -623,6 +734,27 @@ export const translations = {
       history: {
         title: "तुमचा स्कॅन इतिहास",
         desc: "इतिहास एकत्रीकरण लवकरच येत आहे. हे बॅकएंडवरून घेतलेले तुमचे सर्व मागील स्कॅन प्रदर्शित करेल."
+      },
+      soil: {
+        title: "एआय माती विश्लेषक",
+        uploadTitle: "मातीची प्रतिमा अपलोड करा",
+        btnAnalyze: "मातीचे विश्लेषण करा",
+        btnAnalyzing: "मातीचे विश्लेषण होत आहे...",
+        btnGenerate: "उत्पादन धोरण तयार करा",
+        selectCrop: "पीक निवडा",
+        selectSeason: "हंगाम निवडा",
+        selectWater: "पाण्याची पातळी निवडा",
+        phLevel: "pH पातळी",
+        cropsLabel: "शिफारस केलेली पिके",
+        strategyTitle: "उत्पादन वाढीचे धोरण",
+        fertilizerTitle: "शिफारस केलेली खते",
+        nutrientsTitle: "मातीतील पोषक घटकांचे प्रमाण (NPK आणि कार्बन)",
+        qualityTitle: "अंदाजे पीक गुणवत्ता घटक",
+        clayey: "चिकण माती",
+        loamy: "दुमट माती (लोमी)",
+        sandy: "वाळूची माती",
+        black: "काळी माती",
+        red: "लाल माती"
       }
     },
     admin: {
@@ -632,7 +764,7 @@ export const translations = {
       cardScans: "एकूण स्कॅन",
       cardStorage: "वापरलेले स्टोरेज",
       settingsTitle: "सिस्टम सेटिंग्ज",
-      settingsDesc: "अधिक कॉन्फ़िगरेशन पर्याय येथे उपलब्ध असतील."
+      settingsDesc: "अधिक कॉन्फिगरेशन पर्याय येथे उपलब्ध असतील."
     }
   },
   bn: {
@@ -706,6 +838,7 @@ export const translations = {
       subtitle: "এখানে আপনার খামারের ওভারভিউ এবং সরঞ্জাম রয়েছে।",
       tabScanner: "রোগ স্ক্যানার",
       tabHistory: "স্ক্যানের ইতিহাস",
+      tabSoilAdvisor: "মাটি ও ফলন উপদেষ্টা",
       scanner: {
         title: "এআই ফসল বিশ্লেষক",
         uploadTitle: "ডিভাইস থেকে আপলোড করুন",
@@ -729,6 +862,27 @@ export const translations = {
       history: {
         title: "আপনার স্ক্যানের ইতিহাস",
         desc: "ইতিহাস একীকরণ শীঘ্রই আসছে। এটি ব্যাকএন্ড থেকে আনা আপনার সমস্ত অতীতের স্ক্যানগুলি প্রদর্শন করবে।"
+      },
+      soil: {
+        title: "এআই মাটি বিশ্লেষক",
+        uploadTitle: "মাটির ছবি আপলোড করুন",
+        btnAnalyze: "মাটি বিশ্লেষণ করুন",
+        btnAnalyzing: "মাটি বিশ্লেষণ করা হচ্ছে...",
+        btnGenerate: "ফলন কৌশল তৈরি করুন",
+        selectCrop: "ফসল নির্বাচন করুন",
+        selectSeason: "ঋতু নির্বাচন করুন",
+        selectWater: "জলের স্তর নির্বাচন করুন",
+        phLevel: "pH মাত্রা",
+        cropsLabel: "প্রস্তাবিত ফসল",
+        strategyTitle: "ফলন বৃদ্ধির কৌশল",
+        fertilizerTitle: "প্রস্তাবিত সার",
+        nutrientsTitle: "মাটির পুষ্টি উপাদান (NPK ও কার্বন)",
+        qualityTitle: "অনুমিত ফসলের গুণমান সূচক",
+        clayey: "কাদামাটি",
+        loamy: "দোআঁশ মাটি (লোমি)",
+        sandy: "বেলে মাটি",
+        black: "কালো মাটি",
+        red: "লাল মাটি"
       }
     },
     admin: {
@@ -812,6 +966,7 @@ export const translations = {
       subtitle: "અહીં તમારા ખેતરની ઝાંખી અને સાધનો છે.",
       tabScanner: "રોગ સ્કેનર",
       tabHistory: "સ્કેન ઇતિહાસ",
+      tabSoilAdvisor: "જમીન અને ઉપજ સલાહકાર",
       scanner: {
         title: "એઆઈ પાક વિશ્લેષક",
         uploadTitle: "ડિવાઇસમાંથી અપલોડ કરો",
@@ -835,6 +990,27 @@ export const translations = {
       history: {
         title: "તમારો સ્કેન ઇતિહાસ",
         desc: "ઇતિહાસ એકીકરણ ટૂંક સમયમાં આવી રહ્યું છે. તે બેકએન્ડમાંથી મેળવેલ તમારા બધા ભૂતકાળના સ્કેન પ્રદર્શિત કરશે."
+      },
+      soil: {
+        title: "એઆઈ જમીન વિશ્લેષક",
+        uploadTitle: "જમીનની ઇમેજ અપલોડ કરો",
+        btnAnalyze: "જમીનનું વિશ્લેષણ કરો",
+        btnAnalyzing: "જમીનનું વિશ્લેષણ થઈ રહ્યું છે...",
+        btnGenerate: "ઉપજની વ્યૂહરચના બનાવો",
+        selectCrop: "પાક પસંદ કરો",
+        selectSeason: "ઋતુ પસંદ કરો",
+        selectWater: "પાણીનું સ્તર પસંદ કરો",
+        phLevel: "pH સ્તર",
+        cropsLabel: "ભલામણ કરેલ પાક",
+        strategyTitle: "ઉપજ વધારવાની વ્યૂહરચના",
+        fertilizerTitle: "ભલામણ કરેલ ખાતરો",
+        nutrientsTitle: "જમીનના પોષક તત્વોનું પ્રમાણ (NPK અને કાર્બન)",
+        qualityTitle: "અંદાજિત પાકની ગુણવત્તાના પરિબળો",
+        clayey: "ચીકણી માટી (ક્લે)",
+        loamy: "ગોરાડુ માટી (લોમી)",
+        sandy: "રેતાળ માટી",
+        black: "કાળી માટી",
+        red: "લાલ માટી"
       }
     },
     admin: {
@@ -871,7 +1047,7 @@ export const translations = {
         detectionTitle: "രോഗം കണ്ടെത്തൽ",
         detectionDesc: "വിളയുടെ ഇലകളുടെ ചിത്രങ്ങൾ അപ്‌ലോഡ് ചെയ്ത് ഞങ്ങളുടെ പരിശീലനം സിദ്ധിച്ച AI മോഡലുകൾ ഉപയോഗിച്ച് ഉയർന്ന കൃത്യതയോടെ രോഗങ്ങൾ തൽക്ഷണം കണ്ടെത്തുക.",
         weatherTitle: "കാലാവസ്ഥ അടിസ്ഥാനമാക്കിയുള്ള ടിപ്പുകൾ",
-        weatherDesc: "നിലവിലെ കാലാവസ്ഥയ്ക്ക് അനുയോജ്യമായ രീതിയിൽ സ്മാർട്ട് ആയ പ്രാദേശിക നിർദ്ദേശങ്ങളും ഉപദേശങ്ങളും നേടുക.",
+        weatherDesc: "നിലവിലെ കാലാവസ്ഥയ്ക്ക് അനുയോജ്യമായ രീതിയിൽ സ്മാർട്ട് ആയ പ്രാദേശിക നിർദ്ദേശങ്ങളും ഉപദേശങ്ങളും നേดുക.",
         yieldTitle: "വിളവ് വർദ്ധിപ്പിക്കൽ",
         yieldDesc: "ഞങ്ങളുടെ വിദഗ്ദ്ധ നിർദ്ദേശങ്ങളിലൂടെയും വ്യക്തിഗത ശുപാർശകളിലൂടെയും വിളകളുടെ ഗുണനിലവാരവും അളവും വർദ്ധിപ്പിക്കുക.",
         yieldNew: "പുതിയത്",
@@ -918,6 +1094,7 @@ export const translations = {
       subtitle: "നിങ്ങളുടെ കൃഷിയിടത്തിന്റെ അവലോകനവും ഉപകരണങ്ങളും ഇവിടെയുണ്ട്.",
       tabScanner: "രോഗ സ്കാനർ",
       tabHistory: "സ്കാൻ ചരിത്രം",
+      tabSoilAdvisor: "മണ്ണും വിളവും ഉപദേശകൻ",
       scanner: {
         title: "AI വിള വിശകലന ഉപകരണം",
         uploadTitle: "ഉപകരണത്തിൽ നിന്ന് അപ്‌ലോഡ് ചെയ്യുക",
@@ -941,6 +1118,27 @@ export const translations = {
       history: {
         title: "നിങ്ങളുടെ സ്കാൻ ചരിത്രം",
         desc: "സ്കാൻ ചരിത്രം ഉടൻ ലഭ്യമാകും. ഇത് മുൻകാല സ്കാനുകളുടെ വിവരങ്ങൾ പ്രദർശിപ്പിക്കും."
+      },
+      soil: {
+        title: "AI മണ്ണ് വിശകലന ഉപകരണം",
+        uploadTitle: "മണ്ണിൻ്റെ ചിത്രം അപ്‌ലോഡ് ചെയ്യുക",
+        btnAnalyze: "മണ്ണ് വിശകലനം ചെയ്യുക",
+        btnAnalyzing: "മണ്ണ് വിശകലനം ചെയ്യുന്നു...",
+        btnGenerate: "വിളവ് വർദ്ധിപ്പിക്കൽ തന്ത്രം നിർമ്മിക്കുക",
+        selectCrop: "വിള തിരഞ്ഞെടുക്കുക",
+        selectSeason: "കാലാവസ്ഥ തിരഞ്ഞെടുക്കുക",
+        selectWater: "ജല ലഭ്യത തിരഞ്ഞെടുക്കുക",
+        phLevel: "pH നില",
+        cropsLabel: "ശുപാർശ ചെയ്യുന്ന വിളകൾ",
+        strategyTitle: "വിളവ് വർദ്ധിപ്പിക്കൽ തന്ത്രം",
+        fertilizerTitle: "ശുപാർശ ചെയ്യുന്ന വളങ്ങൾ",
+        nutrientsTitle: "മണ്ണിലെ പോഷകാംശം (NPK & കാർബൺ)",
+        qualityTitle: "അനുമാനിക്കുന്ന വിള ഗുണമേന്മ ഘടകങ്ങൾ",
+        clayey: "കളിമണ്ണ്",
+        loamy: "ലോമി മണ്ണ്",
+        sandy: "മണൽ മണ്ണ്",
+        black: "കറുത്ത മണ്ണ്",
+        red: "ചുവന്ന മണ്ണ്"
       }
     },
     admin: {
@@ -948,7 +1146,7 @@ export const translations = {
       subtitle: "ഉപയോക്താക്കളെയും സിസ്റ്റം പ്രവർത്തനങ്ങളെയും നിയന്ത്രിക്കുക.",
       cardUsers: "ആകെ ഉപയോക്താക്കൾ",
       cardScans: "ആകെ സ്കാനുകൾ",
-      cardStorage: "ഉപയോഗിച്ച സംഭരണ സ്ഥലം",
+      cardStorage: "ഉпоയോഗിച്ച സംഭരണ സ്ഥലം",
       settingsTitle: "സിസ്റ്റം ക്രമീകരണങ്ങൾ",
       settingsDesc: "കൂടുതൽ ക്രമീകരണങ്ങൾ ഇവിടെ ലഭ്യമാകും."
     }
@@ -1024,6 +1222,7 @@ export const translations = {
       subtitle: "Aquí tiene el resumen de su granja y sus herramientas.",
       tabScanner: "Escáner de enfermedades",
       tabHistory: "Historial de escaneos",
+      tabSoilAdvisor: "Asesor de Suelo y Rendimiento",
       scanner: {
         title: "Analizador de cultivos de IA",
         uploadTitle: "Subir desde el dispositivo",
@@ -1047,6 +1246,27 @@ export const translations = {
       history: {
         title: "Historial de escaneos",
         desc: "La integración del historial estará disponible pronto. Esto mostrará todos sus escaneos anteriores recuperados del backend."
+      },
+      soil: {
+        title: "Asesor de Suelo y Rendimiento",
+        uploadTitle: "Subir Imagen de Suelo",
+        btnAnalyze: "Analizar Suelo",
+        btnAnalyzing: "Analizando Suelo...",
+        btnGenerate: "Generar Estrategia de Rendimiento",
+        selectCrop: "Seleccionar Cultivo",
+        selectSeason: "Seleccionar Temporada",
+        selectWater: "Seleccionar Nivel de Agua",
+        phLevel: "Nivel de pH",
+        cropsLabel: "Cultivos Recomendados",
+        strategyTitle: "Estrategia de Incremento de Rendimiento",
+        fertilizerTitle: "Fertilizantes Recomendados",
+        nutrientsTitle: "Composición de Nutrientes del Suelo (NPK y Carbono)",
+        qualityTitle: "Factores de Calidad del Cultivo Proyectados",
+        clayey: "Suelo Arcilloso",
+        loamy: "Suelo Franco",
+        sandy: "Suelo Arenoso",
+        black: "Suelo Negro",
+        red: "Suelo Rojo"
       }
     },
     admin: {
