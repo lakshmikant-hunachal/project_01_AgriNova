@@ -2,9 +2,11 @@ import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Camera, Upload, RefreshCw, Save, CheckCircle, AlertTriangle, Video, X } from 'lucide-react';
 import { saveScan } from '../api/api';
+import { useTranslation } from '../context/LanguageContext';
 
 const Dashboard = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [user, setUser] = useState(null);
   const [activeTab, setActiveTab] = useState('scanner');
   
@@ -29,13 +31,16 @@ const Dashboard = () => {
     return () => stopCamera(); // Cleanup on unmount
   }, [navigate]);
 
+  useEffect(() => {
+    if (isCameraOpen && streamRef.current && videoRef.current) {
+      videoRef.current.srcObject = streamRef.current;
+    }
+  }, [isCameraOpen]);
+
   const startCamera = async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
       streamRef.current = stream;
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-      }
       setIsCameraOpen(true);
     } catch (err) {
       console.error("Error accessing camera:", err);
@@ -99,10 +104,10 @@ const Dashboard = () => {
         ...scanResult,
         image: selectedImage // In a real app, upload image to storage and save URL
       });
-      alert('Scan saved to history successfully!');
+      alert(t('dashboard.results.saveSuccess'));
     } catch (err) {
       console.error(err);
-      alert('Failed to save scan.');
+      alert(t('dashboard.results.saveFail'));
     }
   };
 
@@ -112,8 +117,8 @@ const Dashboard = () => {
     <div className="container" style={{ padding: '2rem 1.5rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <div>
-          <h1 className="heading-lg" style={{ marginBottom: '0.5rem' }}>Welcome, {user.name}</h1>
-          <p style={{ color: 'var(--text-muted)' }}>Here is your farm overview and tools.</p>
+          <h1 className="heading-lg" style={{ marginBottom: '0.5rem' }}>{t('dashboard.greeting')}{user.name}</h1>
+          <p style={{ color: 'var(--text-muted)' }}>{t('dashboard.subtitle')}</p>
         </div>
       </div>
 
@@ -122,13 +127,13 @@ const Dashboard = () => {
           onClick={() => setActiveTab('scanner')} 
           style={{ background: 'none', color: activeTab === 'scanner' ? 'var(--primary)' : 'var(--text-muted)', fontWeight: activeTab === 'scanner' ? '600' : '500', padding: '0.5rem 1rem', borderBottom: activeTab === 'scanner' ? '2px solid var(--primary)' : 'none' }}
         >
-          Disease Scanner
+          {t('dashboard.tabScanner')}
         </button>
         <button 
           onClick={() => setActiveTab('history')} 
           style={{ background: 'none', color: activeTab === 'history' ? 'var(--primary)' : 'var(--text-muted)', fontWeight: activeTab === 'history' ? '600' : '500', padding: '0.5rem 1rem', borderBottom: activeTab === 'history' ? '2px solid var(--primary)' : 'none' }}
         >
-          Scan History
+          {t('dashboard.tabHistory')}
         </button>
       </div>
 
@@ -136,7 +141,7 @@ const Dashboard = () => {
         <div className="grid">
           {/* Scanner Area */}
           <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <h3 className="heading-md" style={{ alignSelf: 'flex-start', marginBottom: '1.5rem' }}>AI Crop Analyzer</h3>
+            <h3 className="heading-md" style={{ alignSelf: 'flex-start', marginBottom: '1.5rem' }}>{t('dashboard.scanner.title')}</h3>
             
             {!selectedImage && !isCameraOpen ? (
               <div style={{ width: '100%', display: 'flex', gap: '1rem', flexDirection: 'column' }}>
@@ -149,8 +154,8 @@ const Dashboard = () => {
                   <div style={{ background: 'rgba(15, 23, 42, 0.5)', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
                     <Upload size={24} style={{ color: 'var(--text-muted)' }} />
                   </div>
-                  <h4 style={{ fontWeight: '500', marginBottom: '0.5rem' }}>Upload from device</h4>
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Supports JPG, PNG (Max 5MB)</p>
+                  <h4 style={{ fontWeight: '500', marginBottom: '0.5rem' }}>{t('dashboard.scanner.uploadTitle')}</h4>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>{t('dashboard.scanner.uploadDesc')}</p>
                   <input type="file" ref={fileInputRef} onChange={handleImageUpload} accept="image/*" style={{ display: 'none' }} />
                 </div>
                 
@@ -161,7 +166,7 @@ const Dashboard = () => {
                 </div>
 
                 <button onClick={startCamera} className="btn-outline" style={{ width: '100%', padding: '1rem' }}>
-                  <Video size={20} /> Use Camera
+                  <Video size={20} /> {t('dashboard.scanner.btnCamera')}
                 </button>
               </div>
             ) : isCameraOpen ? (
@@ -173,7 +178,7 @@ const Dashboard = () => {
                   </button>
                 </div>
                 <button onClick={captureImage} className="btn-primary" style={{ width: '100%' }}>
-                  <Camera size={18} /> Capture Photo
+                  <Camera size={18} /> {t('dashboard.scanner.btnCapture')}
                 </button>
                 <canvas ref={canvasRef} style={{ display: 'none' }}></canvas>
               </div>
@@ -186,13 +191,13 @@ const Dashboard = () => {
                 {!scanResult && (
                   <div style={{ display: 'flex', gap: '1rem' }}>
                     <button onClick={() => setSelectedImage(null)} className="btn-outline" style={{ flex: 1 }}>
-                      <RefreshCw size={18} /> Retake
+                      <RefreshCw size={18} /> {t('dashboard.scanner.btnRetake')}
                     </button>
                     <button onClick={handleScan} className="btn-primary" style={{ flex: 2 }} disabled={isScanning}>
                       {isScanning ? (
-                        <>Scanning...</>
+                        <>{t('dashboard.scanner.btnAnalyzing')}</>
                       ) : (
-                        <><Camera size={18} /> Analyze Crop</>
+                        <><Camera size={18} /> {t('dashboard.scanner.btnAnalyze')}</>
                       )}
                     </button>
                   </div>
@@ -203,30 +208,30 @@ const Dashboard = () => {
 
           {/* Results Area */}
           <div className="glass-card">
-            <h3 className="heading-md" style={{ marginBottom: '1.5rem' }}>Analysis Results</h3>
+            <h3 className="heading-md" style={{ marginBottom: '1.5rem' }}>{t('dashboard.results.title')}</h3>
             
             {!scanResult ? (
               <div style={{ height: '300px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
                 <Camera size={48} style={{ opacity: 0.2, marginBottom: '1rem' }} />
-                <p>Upload and analyze an image to see results here.</p>
+                <p>{t('dashboard.results.placeholder')}</p>
               </div>
             ) : (
               <div className="animate-fade-in">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem', padding: '1rem', background: 'rgba(239, 68, 68, 0.1)', borderRadius: 'var(--radius-sm)', border: '1px solid rgba(239, 68, 68, 0.2)' }}>
                   <AlertTriangle size={24} style={{ color: 'var(--danger)' }} />
                   <div>
-                    <h4 style={{ color: 'var(--danger)', fontWeight: '600' }}>Disease Detected</h4>
+                    <h4 style={{ color: 'var(--danger)', fontWeight: '600' }}>{t('dashboard.results.detected')}</h4>
                     <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{scanResult.disease}</p>
                   </div>
                   <div style={{ marginLeft: 'auto', background: 'var(--danger)', color: 'white', padding: '0.25rem 0.5rem', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}>
-                    {scanResult.confidence}% match
+                    {scanResult.confidence}% {t('dashboard.results.match')}
                   </div>
                 </div>
 
                 <div style={{ marginBottom: '2rem' }}>
                   <h4 style={{ fontWeight: '600', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <CheckCircle size={18} style={{ color: 'var(--primary)' }} />
-                    Recommended Treatment
+                    {t('dashboard.results.treatmentTitle')}
                   </h4>
                   <p style={{ color: 'var(--text-muted)', background: 'rgba(15, 23, 42, 0.6)', padding: '1rem', borderRadius: 'var(--radius-sm)' }}>
                     {scanResult.treatment}
@@ -234,7 +239,7 @@ const Dashboard = () => {
                 </div>
 
                 <button onClick={handleSaveScan} className="btn-primary" style={{ width: '100%' }}>
-                  <Save size={18} /> Save to My Records
+                  <Save size={18} /> {t('dashboard.results.btnSave')}
                 </button>
               </div>
             )}
@@ -244,8 +249,8 @@ const Dashboard = () => {
 
       {activeTab === 'history' && (
         <div className="glass-card">
-          <h3 className="heading-md" style={{ marginBottom: '1.5rem' }}>Your Scan History</h3>
-          <p style={{ color: 'var(--text-muted)' }}>History integration coming soon. This will display all your past scans fetched from the backend.</p>
+          <h3 className="heading-md" style={{ marginBottom: '1.5rem' }}>{t('dashboard.history.title')}</h3>
+          <p style={{ color: 'var(--text-muted)' }}>{t('dashboard.history.desc')}</p>
         </div>
       )}
     </div>

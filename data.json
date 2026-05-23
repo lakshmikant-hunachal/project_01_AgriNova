@@ -5,7 +5,22 @@
       "email": "lakshmikant.cs24@bmsce.ac.in",
       "phone": "6363336101",
       "password": "Kant@0607"
+    },
+    {
+      "name": "karthik",
+      "email": "kanthunachal@gmail.com",
+      "phone": "7899893489",
+      "password": "Laxmi@0607"
     }
   ],
-  "scans": []
+  "scans": [
+    {
+      "userEmail": "kanthunachal@gmail.com",
+      "disease": "Early Blight",
+      "confidence": 94.5,
+      "treatment": "Apply copper-based fungicide. Ensure proper spacing between plants for airflow.",
+      "timestamp": "2026-05-23T12:02:30.343Z",
+      "image": "data:,"
+    }
+  ]
 }

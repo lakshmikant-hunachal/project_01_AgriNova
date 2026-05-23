@@ -1,4 +1,8 @@
+import { useTranslation } from '../context/LanguageContext';
+
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer style={{ 
       borderTop: '1px solid var(--surface-border)', 
@@ -9,7 +13,7 @@ const Footer = () => {
     }}>
       <div className="container">
         <p style={{ color: 'var(--text-muted)' }}>
-          © {new Date().getFullYear()} Smart Crop Doctor | Developed by Lakshmikant
+          © {new Date().getFullYear()} Smart Crop Doctor | {t('common.developed')}
         </p>
       </div>
     </footer>

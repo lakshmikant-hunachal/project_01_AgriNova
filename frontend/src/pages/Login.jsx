@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginUser } from '../api/api';
 import { Leaf, Mail, Lock, AlertCircle } from 'lucide-react';
+import { useTranslation } from '../context/LanguageContext';
 
 const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +21,7 @@ const Login = () => {
       localStorage.setItem('user', JSON.stringify(response.user));
       navigate('/dashboard');
     } catch (err) {
-      setError(err.message || 'Failed to login');
+      setError(err.message || t('login.btnLoading')); // use dynamic error fallback if needed, or static fallback
     } finally {
       setLoading(false);
     }
@@ -32,8 +34,8 @@ const Login = () => {
           <div style={{ display: 'inline-flex', padding: '1rem', background: 'rgba(16, 185, 129, 0.1)', borderRadius: '50%', marginBottom: '1rem' }}>
             <Leaf size={32} style={{ color: 'var(--primary)' }} />
           </div>
-          <h2 className="heading-md">Welcome Back</h2>
-          <p style={{ color: 'var(--text-muted)' }}>Login to your Smart Crop Doctor account</p>
+          <h2 className="heading-md">{t('login.title')}</h2>
+          <p style={{ color: 'var(--text-muted)' }}>{t('login.subtitle')}</p>
         </div>
 
         {error && (
@@ -45,14 +47,14 @@ const Login = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="input-group">
-            <label className="input-label">Email Address</label>
+            <label className="input-label">{t('login.emailLabel')}</label>
             <div style={{ position: 'relative' }}>
               <Mail size={18} style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
               <input 
                 type="email" 
                 className="input-field" 
                 style={{ paddingLeft: '3rem' }}
-                placeholder="Enter your email"
+                placeholder={t('login.emailPlaceholder')}
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -61,14 +63,14 @@ const Login = () => {
           </div>
 
           <div className="input-group" style={{ marginBottom: '2rem' }}>
-            <label className="input-label">Password</label>
+            <label className="input-label">{t('login.passwordLabel')}</label>
             <div style={{ position: 'relative' }}>
               <Lock size={18} style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
               <input 
                 type="password" 
                 className="input-field" 
                 style={{ paddingLeft: '3rem' }}
-                placeholder="Enter your password"
+                placeholder={t('login.passwordPlaceholder')}
                 required
                 value={formData.password}
                 onChange={(e) => setFormData({...formData, password: e.target.value})}
@@ -77,12 +79,12 @@ const Login = () => {
           </div>
 
           <button type="submit" className="btn-primary" style={{ width: '100%', padding: '1rem' }} disabled={loading}>
-            {loading ? 'Logging in...' : 'Login securely'}
+            {loading ? t('login.btnLoading') : t('login.btnText')}
           </button>
         </form>
 
         <p style={{ textAlign: 'center', marginTop: '2rem', color: 'var(--text-muted)' }}>
-          Don't have an account? <Link to="/register" style={{ color: 'var(--primary)', fontWeight: '500' }}>Register here</Link>
+          {t('login.noAccount')} <Link to="/register" style={{ color: 'var(--primary)', fontWeight: '500' }}>{t('login.registerLink')}</Link>
         </p>
       </div>
     </div>
